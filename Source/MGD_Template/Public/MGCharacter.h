@@ -26,5 +26,5 @@ public:
 public:
 	// move axis of the character
 	UPROPERTY(BlueprintReadOnly, Category="Movement")
-	FVector2D pMoveAxis; 
+	FVector2D pMoveAxis;
 };
