@@ -27,4 +27,18 @@ public:
 	// move axis of the character
 	UPROPERTY(BlueprintReadOnly, Category="Movement")
 	FVector2D pMoveAxis;
+
+	// Replicated pitch for the character
+	UPROPERTY(BlueprintReadOnly, Category="Pitch")
+	float pRepPitch;
+
+protected:
+	// Server replicated pitch float (to server)
+	UFUNCTION(Server, Reliable, Category="Replication")
+	void Server_RepPitch(const float& Pitch);
+
+	// Replicate to server than all clients
+	UFUNCTION(NetMulticast, Reliable, Category="Replication")
+	void Multi_RepPitch(const float& Pitch);
+	
 };
