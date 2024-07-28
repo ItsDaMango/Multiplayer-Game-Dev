@@ -7,7 +7,7 @@ void AMGPlayerController::OnRep_Pawn()
 {
 	Super::OnRep_Pawn();
 
-	UE_LOG(LogTemp, Warning, TEXT("OnPossess"))
+	UE_LOG(LogTemp, Warning, TEXT("On Possess"))
 	
 	Pure_OnRepPosess(GetPawn());
 	
