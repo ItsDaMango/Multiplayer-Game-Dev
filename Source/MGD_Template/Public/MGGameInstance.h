@@ -20,7 +20,6 @@ UCLASS()
 class MGD_TEMPLATE_API UMGGameInstance : public UGameInstance
 {
 	GENERATED_BODY()
-
 	
 	// Keyword any class can access
 public:
