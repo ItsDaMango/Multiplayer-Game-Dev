@@ -20,10 +20,11 @@ UCLASS()
 class MGD_TEMPLATE_API UMGGameInstance : public UGameInstance
 {
 	GENERATED_BODY()
+
+	
 	// Keyword any class can access
 public:
 	UMGGameInstance();
-
 	
 	virtual void Init() override;
 	
@@ -48,6 +49,8 @@ public:
 	
 	UFUNCTION(BlueprintCallable, Category="Session")
 	void StartLobbyGame();
+
+
 	
 	// Keyword Only this class
 private:
@@ -66,9 +69,12 @@ private:
 
 	// runs on session join complete
 	void SessionJoinComplete(FName SessionName, EOnJoinSessionCompleteResult::Type Result);
+
+
 	
 	// Keyword This class and child classes
 protected:
+	
 	UFUNCTION(BlueprintImplementableEvent, Category="Login")
 	void OnLoginComplete(bool success, const FString& error);
 

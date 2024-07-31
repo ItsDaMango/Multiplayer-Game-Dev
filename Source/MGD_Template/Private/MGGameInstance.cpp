@@ -50,7 +50,7 @@ void UMGGameInstance::Init()
 void UMGGameInstance::LoginEOS()
 {
 	// This is the online subsystem
-	// This gives us access to all of the online subsystem functions
+	// This gives us access online subsystem functions
 	const IOnlineSubsystem* ossRef = Online::GetSubsystem(GetWorld());
 
 	// If ossRef returns null
@@ -69,7 +69,7 @@ void UMGGameInstance::LoginEOS()
 		return;
 
 	// this sets up the type of account credentials that the login expects
-	// the account portal is a login portal that opens when you try to login
+	// the account portal is a login portal that opens when you try to Log in
 	FOnlineAccountCredentials accCreds;
 	accCreds.Id = FString();
 	accCreds.Token = FString();
@@ -132,9 +132,9 @@ void UMGGameInstance::HostGame(bool lan)
 		return;
 
 	// get the session interface
-	const IOnlineSessionPtr sessionref = Online::GetSubsystem(GetWorld())->GetSessionInterface();
+	const IOnlineSessionPtr sessionRef = Online::GetSubsystem(GetWorld())->GetSessionInterface();
 
-	if(!sessionref)
+	if(!sessionRef)
 		return;
 
 	// define settings of the session
@@ -150,7 +150,7 @@ void UMGGameInstance::HostGame(bool lan)
 	settings.Set(SEARCH_LOBBIES, true, EOnlineDataAdvertisementType::ViaOnlineService);
 
 	// create the session using the settings and name we created
-	sessionref->CreateSession(0, MGSESSION_NAME, settings);
+	sessionRef->CreateSession(0, MGSESSION_NAME, settings);
 	
 }
 
@@ -160,21 +160,21 @@ void UMGGameInstance::FindAndJoinSession()
 	if(!IsLoggedIn())
 		return;
 
-	const IOnlineSessionPtr sessionref = Online::GetSubsystem(GetWorld())->GetSessionInterface();
+	const IOnlineSessionPtr sessionRef = Online::GetSubsystem(GetWorld())->GetSessionInterface();
 
 	// finding a session based on found sessions query settings
-	sessionref->FindSessions(0, FoundSessions.ToSharedRef() );
+	sessionRef->FindSessions(0, FoundSessions.ToSharedRef());
+	
 }
 
 void UMGGameInstance::StartLobbyGame()
 {
 	GetWorld()->GetAuthGameMode()->bUseSeamlessTravel = true;
-	GetWorld()->ServerTravel("game/MyContent/Maps/Lvl_Test", false);
+	GetWorld()->ServerTravel("Game/MyContent/Maps/Lvl_Test", false);
 }
 
 // Function EOSLoginComplete
-void UMGGameInstance::EOSloginComplete(int32 LocalUserNum, bool bWasSuccessful, const FUniqueNetId& UserId,
-                                       const FString& Error)
+void UMGGameInstance::EOSloginComplete(int32 LocalUserNum, bool bWasSuccessful, const FUniqueNetId& UserId, const FString& Error)
 {
 	OnLoginComplete(bWasSuccessful, Error);
 }
@@ -224,8 +224,10 @@ void UMGGameInstance::SessionJoinComplete(FName SessionName, EOnJoinSessionCompl
 	if(Result != EOnJoinSessionCompleteResult::Success)
 	{
 		UE_LOG(LogTemp, Error, TEXT("Failed to join session"))
+		return;
 	}
 
 	// Automatically get the IP address and remote location and travel client to the game
 	ClientTravelToSession(0, SessionName);
 }
+
