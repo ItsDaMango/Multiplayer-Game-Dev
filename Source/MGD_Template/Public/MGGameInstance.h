@@ -49,6 +49,8 @@ public:
 	UFUNCTION(BlueprintCallable, Category="Session")
 	void StartLobbyGame();
 
+	UFUNCTION(BlueprintCallable, Category="Session")
+	void StartReturnLobby();
 
 	
 	// Keyword Only this class
