@@ -191,6 +191,7 @@ void UMGGameInstance::SessionCreateComplete(FName SessionName, bool bWasSuccessf
 	EnableListenServer(true);
 	OnSessionCreateComplete(bWasSuccessful);
 }
+// Function SessionsFindComplete
 void UMGGameInstance::SessionsFindComplete(bool bWasSuccessful)
 {
 	if(!bWasSuccessful)
