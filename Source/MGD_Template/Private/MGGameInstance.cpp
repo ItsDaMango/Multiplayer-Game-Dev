@@ -170,14 +170,15 @@ void UMGGameInstance::FindAndJoinSession()
 void UMGGameInstance::StartLobbyGame()
 {
 	GetWorld()->GetAuthGameMode()->bUseSeamlessTravel = true;
-	GetWorld()->ServerTravel("Game/MyContent/Maps/Lvl_Test", false);
+	GetWorld()->ServerTravel("/Game/MyContent/Maps/Lvl_Test", false);
 }
 
-void UMGGameInstance::StartReturnLobby()
+void UMGGameInstance::EndLobbyGame()
 {
 	GetWorld()->GetAuthGameMode()->bUseSeamlessTravel = true;
-	GetWorld()->ServerTravel("Game/MyContent/Maps/Lvl_Lobby", false);
+	GetWorld()->ServerTravel("/Game/MyContent/Maps/Lvl_Lobby", false);
 }
+
 
 // Function EOSLoginComplete
 void UMGGameInstance::EOSloginComplete(int32 LocalUserNum, bool bWasSuccessful, const FUniqueNetId& UserId, const FString& Error)

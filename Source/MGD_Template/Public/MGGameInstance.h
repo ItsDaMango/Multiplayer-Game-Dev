@@ -27,6 +27,7 @@ public:
 	
 	virtual void Init() override;
 	
+	
 	UFUNCTION(BlueprintCallable, Category="Login")
 	void LoginEOS();
 
@@ -50,8 +51,8 @@ public:
 	void StartLobbyGame();
 
 	UFUNCTION(BlueprintCallable, Category="Session")
-	void StartReturnLobby();
-
+	void EndLobbyGame();
+	
 	
 	// Keyword Only this class
 private:
