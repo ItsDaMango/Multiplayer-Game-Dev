@@ -13,10 +13,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c3c26e2-346f-4e72-ac45-4389767d4186" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MGD_Template/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MGD_Template/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MGD_Template/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/MyContent/Characters/BP_Character.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/MyContent/Characters/BP_Character.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/MyContent/Maps/Lvl_Test.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/MyContent/Maps/Lvl_Test.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MGD_Template.sln.DotSettings.user" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/MyContent/Maps/Lvl_Lobby.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/MyContent/Maps/Lvl_Lobby.umap" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +47,7 @@
     &quot;Notification.DoNotAsk-OutOfSyncConnection&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;MG-2025&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -172,6 +171,8 @@
       <workItem from="1734414815888" duration="607000" />
       <workItem from="1737427072860" duration="715000" />
       <workItem from="1740541821037" duration="1272000" />
+      <workItem from="1746609590122" duration="1886000" />
+      <workItem from="1746617456594" duration="238000" />
     </task>
     <servers />
   </component>
