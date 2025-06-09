@@ -29,7 +29,7 @@ public:
 	
 	
 	UFUNCTION(BlueprintCallable, Category="Login")
-	void LoginEOS();
+	void LoginEos();
 
 	UFUNCTION(BlueprintPure, Category="Login")
 	bool IsLoggedIn() const;

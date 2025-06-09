@@ -11,7 +11,7 @@ public class MGD_Template : ModuleRules
 		PublicDependencyModuleNames.AddRange(new string[]
 		{
 			"Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput",
-			"OnlineSubsystemUtils", "OnlineSubsystemEOS", "OnlineSubsystemEOSPlus"
+			"OnlineSubsystemUtils", "OnlineSubsystemEOS", "OnlineSubsystemEOS"
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });

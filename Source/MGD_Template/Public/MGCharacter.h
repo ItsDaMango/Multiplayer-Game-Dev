@@ -6,6 +6,7 @@
 #include "GameFramework/Character.h"
 #include "MGCharacter.generated.h"
 
+
 UCLASS()
 class MGD_TEMPLATE_API AMGCharacter : public ACharacter
 {
@@ -22,7 +23,7 @@ public:
 	// rotate the character controller based on axis
 	UFUNCTION(BlueprintCallable, Category="Controller")
 	void Pure_RotateController(const FVector2D Axis);
-	
+
 public:
 	// move axis of the character
 	UPROPERTY(BlueprintReadOnly, Category="Movement")

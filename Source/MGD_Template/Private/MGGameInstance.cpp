@@ -20,12 +20,12 @@ void UMGGameInstance::Init()
 {
 	Super::Init();
 	
-	const IOnlineSubsystem* ossRef = Online::GetSubsystem(GetWorld());
+	const IOnlineSubsystem* OssRef = Online::GetSubsystem(GetWorld());
 	
-	if (!ossRef)
+	if (!OssRef)
 		return;
 	
-	const IOnlineIdentityPtr identityRef = ossRef->GetIdentityInterface();
+	const IOnlineIdentityPtr identityRef = OssRef->GetIdentityInterface();
 	
 	if (!identityRef)
 		return;
@@ -33,7 +33,7 @@ void UMGGameInstance::Init()
 	// Bind to EOS Login complete function in the identity interface
 	identityRef->OnLoginCompleteDelegates->AddUObject(this, &UMGGameInstance::EOSloginComplete);
 
-	const IOnlineSessionPtr sessionRef = ossRef->GetSessionInterface();
+	const IOnlineSessionPtr sessionRef = OssRef->GetSessionInterface();
 
 	if(!sessionRef)
 		return;
@@ -47,21 +47,21 @@ void UMGGameInstance::Init()
 	sessionRef->OnJoinSessionCompleteDelegates.AddUObject(this, &UMGGameInstance::SessionJoinComplete);
 }
 
-void UMGGameInstance::LoginEOS()
+void UMGGameInstance::LoginEos()
 {
 	// This is the online subsystem
 	// This gives us access online subsystem functions
-	const IOnlineSubsystem* ossRef = Online::GetSubsystem(GetWorld());
+	const IOnlineSubsystem* OssRef = Online::GetSubsystem(GetWorld());
 
 	// If ossRef returns null
 	// exit function
-	if (!ossRef)
+	if (!OssRef)
 		return;
 
 	// this is the identity interface for EOS
 	// We can get info about the players acc from this interface
 	// it also allows us to access auth (login/logout)
-	const IOnlineIdentityPtr identityRef = ossRef->GetIdentityInterface();
+	const IOnlineIdentityPtr identityRef = OssRef->GetIdentityInterface();
 
 	// if IdentityRef returns null
 	// exit function
